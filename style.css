@@ -3,87 +3,87 @@ body {
 }
 
 header {
-    display: flex;
-    background-color: #858585;
-    width: 540px;
-    height: 90px;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-    margin-top: 45px;
+  display: flex;
+  background-color: #858585;
+  width: 540px;
+  height: 90px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
 }
 
 .heading {
-    text-align: center;
-    font-size: 40px;
-    color: #000000;
+  text-align: center;
+  font-size: 40px;
+  color: #000000;
 }
 
 main { 
-    width: 500px;
-    margin: 0 auto;
-    padding: 0 20px 20px;
-    background-color: #858585;
+  width: 500px;
+  margin: 0 auto;
+  padding: 0 20px 20px;
+  background-color: #858585;
 
 }
 
 .screen {
-    display: grid;
-    justify-items: end;
-    width: 470px;
-    height: 90px;
-    padding: 15px;
-    background-color: #028090;
-    margin-bottom: 15px;
-    color: #e8f1f2;
-    overflow: hidden;
-    border-radius: 15px;
+  display: grid;
+  justify-items: end;
+  width: 470px;
+  height: 90px;
+  padding: 15px;
+  background-color: #028090;
+  margin-bottom: 15px;
+  color: #e8f1f2;
+  overflow: hidden;
+  border-radius: 15px;
 }
 
 #history {
-    align-self: start;
-    overflow: hidden;
-    white-space: nowrap;
+  align-self: start;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #input {
-    align-self: end;
-    font-size: 30px;
-    overflow: hidden;
+  align-self: end;
+  font-size: 30px;
+  overflow: hidden;
 }
 
 .buttons {
-    display: grid;
-    gap: 1px;
-    height: 450px;
-    grid-template:
-     'clear backspace power divide'
-     'seven eight nine multiply'
-     'four five six minus'
-     'one two three plus'
-     'zero dot equal plus';
+  display: grid;
+  gap: 1px;
+  height: 450px;
+  grid-template:
+    'clear backspace power divide'
+    'seven eight nine multiply'
+    'four five six minus'
+    'one two three plus'
+    'zero dot equal plus';
 }
 
 .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    color: #e8f1f2;
-    background-color: #028090;
-    cursor: pointer;
-    transition: all 0.2s;
-    user-select: none;
-    border: none;
-    outline: 0;
-    border-radius: 15px;
-    margin: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #e8f1f2;
+  background-color: #028090;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+  border: none;
+  outline: 0;
+  border-radius: 15px;
+  margin: 2%;
 
 }
 
 .button:hover {
-    background-color: #1d2d44;
-    transition: all 0.2s;
+  background-color: #1d2d44;
+  transition: all 0.2s;
 }
  
 .Operator,
@@ -91,67 +91,67 @@ main {
   background-color: #114B5F;
 }
 
-.Clear,
+.clear,
 .Backspace {
   background-color: #F45B69;
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    background-color: #858585;
-    width: 540px;
-    padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #858585;
+  width: 540px;
+  padding-bottom: 20px;
 }
   
 .copyright {
-    color: #028090;
-    font-weight: 600;
+  color: #028090;
+  font-weight: 600;
 }
   
 .copyright a {
-    color: #114B5F;
-    text-decoration: none;
+  color: #114B5F;
+  text-decoration: none;
 }
   
 .copyright a:hover {
-    color: #1d2d44;
-    text-decoration: underline;
-    text-decoration-color: #F45B69;
-    text-decoration-thickness: 2px;
+  color: #1d2d44;
+  text-decoration: underline;
+  text-decoration-color: #F45B69;
+  text-decoration-thickness: 2px;
 }
 
 /* Buttons */
-#num-0 {
+#zero {
   grid-area: zero;
 }
-#num-1 {
+#one {
   grid-area: one;
 }
-#num-2 {
+#two {
   grid-area: two;
 }
-#num-3 {
+#three {
   grid-area: three;
 }
-#num-4 {
+#four {
   grid-area: four;
 }
-#num-5 {
+#five {
   grid-area: five;
 }
-#num-6 {
+#six {
   grid-area: six;
 }
-#num-7 {
+#seven {
   grid-area: seven;
 }
-#num-8 {
+#eight {
   grid-area: eight;
 }
-#num-9 {
+#nine {
   grid-area: nine;
 }
 #num-dot {
