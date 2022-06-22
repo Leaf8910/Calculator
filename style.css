@@ -13,6 +13,11 @@ header {
   margin-top: 45px;
 }
 
+button { 
+  background-color: #858585;
+  color: red;
+}
+
 .heading {
   text-align: center;
   font-size: 40px;
@@ -46,7 +51,7 @@ main {
   white-space: nowrap;
 }
 
-#input {
+#display {
   align-self: end;
   font-size: 30px;
   overflow: hidden;
@@ -86,8 +91,10 @@ main {
   transition: all 0.2s;
 }
  
-.Operator,
-.Equal {
+.operator,
+.Equal,
+.Dot
+ {
   background-color: #114B5F;
 }
 
