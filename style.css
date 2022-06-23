@@ -51,7 +51,7 @@ main {
   white-space: nowrap;
 }
 
-#display {
+#input {
   align-self: end;
   font-size: 30px;
   overflow: hidden;
@@ -92,7 +92,7 @@ main {
 }
  
 .operator,
-.Equal,
+.equals,
 .Dot
  {
   background-color: #114B5F;
