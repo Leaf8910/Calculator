@@ -35,7 +35,7 @@ function multiply(num1, num2) {
 }
 
 function divide(num1, num2) {
-    let divideValue = (num1 / num2);q
+    let divideValue = (num1 / num2);
 
     // error check for division by 0
     if (divideValue == "Infinity") {
@@ -47,6 +47,19 @@ function divide(num1, num2) {
         const calcDisplay = document.querySelector("#input");
         calcDisplay.textContent = rounded;
     }
+}
+
+
+function power(num1, num2) {
+    let answer = num1;
+    for (let i = 1; i < num2; i += 1) {
+        answer *= num1;
+    }
+    const calcDisplay = document.querySelector("#input");
+    calcDisplay.textContent = rounded;
+    let rounded = Math.round((divideValue + Number.EPSILON) * 100) / 100;
+    rounded = rounded.toFixed(2);
+    console.log("power", rounded);
 }
 
 // use operator variable to determine which function to call
@@ -68,6 +81,9 @@ function operate(operator, num1, num2) {
             console.log("passing through switch /");
             divide(num1, num2);
             break;
+        case "^":
+            console.log("passing through switch ^");
+            return Math.pow(parseFloat(num1), parseFloat(num2));
         default:
             alert("ERROR!  Didn't receive an operator, or type not as expected!");
     }
@@ -83,7 +99,7 @@ function runCalculator() {
                 console.log("first number!");
                 savedFirstValue = button.getAttribute("value");
                 console.log(savedFirstValue);
-                const calcDisplay = document.querySelector("#display");
+                const calcDisplay = document.querySelector("#input");
                 
                 // append to num1 if multiple numbers are pressed and display out
                 if (operator == "")  {
@@ -121,7 +137,7 @@ function runCalculator() {
 
                 // check to see if a multi-operand string exists and needs calculated on the fly
                 if ((tempNum1Array != "") && (tempNum2Array != "")) {
-                    const calcDisplay = document.querySelector("#display");
+                    const calcDisplay = document.querySelector("#input");
                     num1 = tempNum1Array.join("");
                     num2 = tempNum2Array.join("");
                     num1 = parseFloat(num1);
@@ -152,7 +168,7 @@ function runCalculator() {
         const equalsButton = document.querySelector(".equals");
             equalsButton.addEventListener('click', () => {
                 console.log("time to run the math!", num1, num2, operator);
-                const calcDisplay = document.querySelector("#display");
+                const calcDisplay = document.querySelector("#input");
                 num1 = parseFloat(num1);
                 num2 = parseFloat(num2);
                 operate(operator, num1, num2);
@@ -162,41 +178,16 @@ function runCalculator() {
     // DOM for "Clear" button
     const clearButton = document.querySelector(".clear");
         clearButton.addEventListener('click', () => { location.reload(); })
-
-    // DOM for "+/-"" button
-    // const signButton = document.querySelector(".sign");    
-    //     signButton.addEventListener('click', () => {
-        
-    //         // append "+/-" to numarray1 and display out
-    //         if (operator == "") {
-    //             const calcDisplay = document.querySelector("#display");
-    //             console.log("negative button registered here!");
-    //             tempNum1Array.splice(0, 1, (tempNum1Array[0] * -1).toString());
-    //             console.log("append the array with negative number: ", tempNum1Array);
-    //             num1 = tempNum1Array.join("");
-    //             calcDisplay.textContent = num1;
-    //         } else {
-
-    //         // append "+/-" to numarray2 and display out
-    //             const calcDisplay = document.querySelector("#display");
-    //             console.log("negative button registered here on num2!");
-    //             tempNum2Array.splice(0, 1, (tempNum2Array[0] * -1).toString());
-    //             console.log("append the array with negative number on num2: ", tempNum2Array);
-    //             num2 = tempNum2Array.join("");
-    //             calcDisplay.textContent = num2;
-    //         }
-    //     })
-
     // DOM for "decimal" button
     const decimalButton = document.querySelector(".decimal");
         decimalButton.addEventListener('click', () => {
             console.log("decimal pressed");
             let decimalButton = ".";
-            const calcDisplay = document.querySelector("#display");
+            const calcDisplay = document.querySelector("#input");
 
             // append "decimal" to numarray1 and display out
             if (operator == "") {
-                const calcDisplay = document.querySelector("#display");
+                const calcDisplay = document.querySelector("#input");
                 console.log("decimal button registered here!", decimalButton);
                 tempNum1Array.push(decimalButton);
                 console.log("append the array1 with decimal: ", tempNum1Array);
@@ -207,7 +198,7 @@ function runCalculator() {
             } else {
                 
             // append "decimal" to numarray2 and display out
-                const calcDisplay = document.querySelector("#display");
+                const calcDisplay = document.querySelector("#input");
                 console.log("decimal button registered here!", decimalButton);
                 tempNum2Array.push(decimalButton);
                 console.log("append the array1 with decimal: ", tempNum2Array);
