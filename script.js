@@ -5,6 +5,7 @@ let tempNum2Array = [];
 let savedFirstValue = 0;
 let operator = "";
 let tempOperatorArray = [];
+// let newInput = '';
 
 
 function add(num1, num2) {
@@ -175,6 +176,14 @@ function runCalculator() {
             })
     }
 
+
+    // DOM for "backspace" button
+    const backspaceButton = document.querySelector(".Backspace");
+        backspaceButton.addEventListener('click', () => {
+            console.log("Backspace Pressed")
+            const calcDisplay = document.querySelector("#input");
+            calcDisplay.textContent.slice(0, -1); 
+        } )
     // DOM for "Clear" button
     const clearButton = document.querySelector(".clear");
         clearButton.addEventListener('click', () => { location.reload(); })
